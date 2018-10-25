@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Messages from '../Messages/Messages'
+import ChatInput from '../ChatInput/ChatInput'
 
 
 

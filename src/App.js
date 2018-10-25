@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ChatApp from './Component/ChatApp/ChatApp'
+import ChatApp from './Component/ChatApp/ChatApp';
+import Message from './Component/Messages/Message'
+import '../src/App.css';
 
 
 
@@ -15,6 +17,12 @@ class App extends Component{
         this.usernameChangeHandler = this.usernameChangeHandler.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    componentDidUpdate(){
+      const objDiv = document.getElementById('messageList');
+      objDiv.scrollTop = objDiv.scrollHeight;
+    }
+
 
     usernameChangeHandler = (event) =>{
         this.setState({
