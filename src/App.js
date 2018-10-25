@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ChatApp from './Component/ChatApp/ChatApp'
 
 
 
@@ -27,7 +28,11 @@ class App extends Component{
     }
 
     render(){
-
+          if(this.state.submitted){
+            return(
+              <ChatApp username={this.state.username} />
+            )
+          }
         return(
             <form onSubmit={this.handleSubmit}>
                 <h1>Come Instachat</h1>
